@@ -9,7 +9,7 @@ st.title("🩻 Demo Quét Ảnh X-Quang ngực")
 
 @st.cache_resource
 def get_model():
-       return load_model('file5-densenet121') 
+       return load_model('densenet121_best.keras') 
 
 model = get_model()
 
