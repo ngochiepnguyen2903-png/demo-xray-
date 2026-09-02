@@ -4,6 +4,15 @@ import numpy as np
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import img_to_array
 
+import os
+st.info("🕵️ THÔNG TIN BÍ MẬT TỪ MÁY CHỦ:")
+st.write("📂 Các file đang có:", os.listdir())
+if os.path.exists('densenet121_best.keras'):
+    size_mb = os.path.getsize('densenet121_best.keras') / (1024*1024)
+    st.write(f"📦 Dung lượng file AI: {size_mb:.2f} MB")
+else:
+    st.error("❌ Không tìm thấy file mô hình!")
+st.divider() # Kẻ một đường gạch ngang
 st.set_page_config(page_title="X-Ray Analyzer Demo", page_icon="🩻")
 st.title("🩻 Demo Quét Ảnh X-Quang ngực")
 
